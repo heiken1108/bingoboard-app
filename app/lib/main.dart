@@ -1,41 +1,51 @@
+import 'package:app/screens/game/game_screen.dart';
+import 'package:app/screens/invitations/invitations_screen.dart';
+import 'package:app/screens/my_games/my_games_screen.dart';
+import 'package:app/screens/new_game/new_game_screen.dart';
+import 'package:app/screens/profile/profile_screen.dart';
+import 'package:app/widgets/bottom_navbar_widget.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  int _selectedIndex = 0;
+
+  final List<Widget> _pages = [
+    MyGamesScreen(),
+    NewGameScreen(),
+    InvitationsScreen(),
+    ProfileScreen(),
+  ];
+
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const HomePage(
-        title: "Heisann",
-        message: "Halla balla bibbebaby",
-      ),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({super.key, required this.title, required this.message});
-  final String title;
-  final String message;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(title),
-      ),
-      body: Center(
-        child: Text(message),
-      ),
-    );
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+            fontFamily: 'Poppins',
+            scaffoldBackgroundColor: const Color(0xff101a23)),
+        home: Scaffold(
+          body: _pages[_selectedIndex],
+          bottomNavigationBar: BottomNavBar(
+            currentIndex: _selectedIndex,
+            onItemTapped: _onItemTapped,
+          ),
+        ));
   }
 }
