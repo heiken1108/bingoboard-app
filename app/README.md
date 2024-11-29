@@ -1,16 +1,12 @@
-# app
+# Bingoboard App
 
-A new Flutter project.
+### Folders
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+-   `models` Where object classes are stored
+-   `screens` Where screens of the app goes. Each screen has its own folder.
+-   `services` Connection to all external services.
+-   `styles` Where styles and themes for the app go.
+-   `utils` Where all helper functions go.
+-   `widgets` Where all reusable widgets go.
+-   `commons.dart` Main import for all things used in app.ials,
+    samples, guidance on mobile development, and a full API reference.
