@@ -1,4 +1,4 @@
-// Screen for an active game
+// Screen for an active game. Should have variable for if game is active and if person is editing
 import 'package:app/widgets/appbar_widget.dart';
 import 'package:flutter/material.dart';
 
