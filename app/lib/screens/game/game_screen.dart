@@ -10,7 +10,7 @@ class GameScreen extends StatelessWidget {
     return const Scaffold(
       appBar: AppBarWidget(title: 'Game'),
       body: Center(
-        child: Text('Your are playing <Current game title>'),
+        child: Text('Your are not currently playing a game'),
       ),
     );
   }

@@ -18,12 +18,16 @@ class BottomNavBar extends StatelessWidget {
       type: BottomNavigationBarType.fixed,
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
-          icon: Icon(Icons.home),
+          icon: Icon(Icons.list),
           label: 'My games',
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.add),
           label: 'New Game',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.home),
+          label: 'Active Game',
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.email_outlined),

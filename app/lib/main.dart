@@ -1,3 +1,4 @@
+import 'package:app/screens/game/game_screen.dart';
 import 'package:app/screens/invitations/invitations_screen.dart';
 import 'package:app/screens/my_games/my_games_screen.dart';
 import 'package:app/screens/new_game/new_game_screen.dart';
@@ -17,11 +18,12 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  int _selectedIndex = 0;
+  int _selectedIndex = 2;
 
   final List<Widget> _pages = [
     MyGamesScreen(),
     NewGameScreen(),
+    GameScreen(),
     InvitationsScreen(),
     ProfileScreen(),
   ];
